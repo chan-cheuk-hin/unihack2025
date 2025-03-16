@@ -1,8 +1,5 @@
 <?php
 
-// require "Util.php";
-
-
 class Database {
 
     
@@ -80,8 +77,6 @@ class Database {
             return false;
         }
     }
-
-
 
 
 }

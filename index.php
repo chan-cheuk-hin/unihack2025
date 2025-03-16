@@ -15,33 +15,10 @@ header("Access-Control-Allow-Headers: X-Requested-With");
 
 Util::Log("api requested, payload: " . json_encode($_POST));
 
-// Database::AddEntry("2025-10-01", "TITLE", "TEXT");
-
-// if(!isset($_POST['key']) || !$_POST['key'] === 'c476f6a060f200780966797c95f2b6e0a950a9e3fa8a853965214686b90dbbc1'){
-//     exit;
-// }
-
-// echo json_encode([
-//     "response" => "ok"
-// ]);
-
 if(isset($_POST['action'])) {
 
     $action = $_POST['action'];
     
-    // if($action === 'evaluate_mood'){
-
-    //     $text = $_POST['text'];
-    //     exec("/var/www/html/venv/bin/python emotion_classifier.py '$text' 2>&1", $output);
-    //     $result = explode("#", $output[1]);
-    //     echo json_encode([
-    //         "label" => $result[0],
-    //         "score" => $result[1],
-    //         "response_time" => microtime(TRUE)-$begin
-    //     ]);
-
-    // }
-
     if($action === 'add_entry'){
 
         Util::Log("add_entry called");
