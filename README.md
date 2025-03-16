@@ -20,7 +20,9 @@ All responses contain : "response" & "response_time" (seconds)
 
 # Mood & Emotion Score Classifier
 
-Model: https://huggingface.co/j-hartmann/emotion-english-distilroberta-base
+emotion_classifier.py takes in a piece of text as an argument, outputs the mood class and the score.
+
+Model used: https://huggingface.co/j-hartmann/emotion-english-distilroberta-base
 
 Testing datasets: 
 - https://www.kaggle.com/datasets/madhavmalhotra/journal-entries-with-labelled-emotions
