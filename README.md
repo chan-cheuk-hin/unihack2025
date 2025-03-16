@@ -31,6 +31,6 @@ emotion_classifier.py takes in a piece of text as an argument, outputs the mood 
 
 Model used: https://huggingface.co/j-hartmann/emotion-english-distilroberta-base
 
-Dummy data: 
+Dummy data for database: 
 - https://www.kaggle.com/datasets/madhavmalhotra/journal-entries-with-labelled-emotions
 - https://www.kaggle.com/datasets/parulpandey/emotion-dataset
