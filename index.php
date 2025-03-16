@@ -15,6 +15,13 @@ header("Access-Control-Allow-Headers: X-Requested-With");
 
 Util::Log("api requested, payload: " . json_encode($_POST));
 
+if($_SERVER["REQUEST_METHOD"] === "GET"){
+    echo json_encode([
+        "response" => "ok",
+        "response_time" => microtime(TRUE)-$begin
+    ]);
+}
+
 if(isset($_POST['action'])) {
 
     $action = $_POST['action'];
@@ -68,6 +75,20 @@ if(isset($_POST['action'])) {
             ]);
 
         }
+
+    }
+
+    elseif($action === 'get_dates'){
+
+        Util::Log("get_dates called");
+
+        $dates = Database::GetDates();
+
+        echo json_encode([
+            "response" => "ok",
+            "dates" => $dates,
+            "response_time" => microtime(TRUE)-$begin
+        ]);
 
     }
 
