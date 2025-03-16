@@ -17,3 +17,11 @@ Endpoint: https://cchandrew.com/api/unihack2025/
 - Response: If date does not exist, {response: "date_does_not_exist"}. If date exists, "{response: ok", "title", "text", "label", "score"}
 
 All responses contain : "response" & "response_time" (seconds)
+
+# Mood & Emotion Score Classifier
+
+Model: https://huggingface.co/j-hartmann/emotion-english-distilroberta-base
+
+Testing datasets: 
+- https://www.kaggle.com/datasets/madhavmalhotra/journal-entries-with-labelled-emotions
+- https://www.kaggle.com/datasets/parulpandey/emotion-dataset
