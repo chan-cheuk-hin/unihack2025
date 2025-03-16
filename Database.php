@@ -62,6 +62,7 @@ class Database {
     }
 
 
+
     public static function GetEntry($date) {
         try {
 
@@ -72,6 +73,22 @@ class Database {
             $stmt->bindValue(':date', $date, PDO::PARAM_STR);
             $stmt->execute();
             return $stmt->fetch(PDO::FETCH_ASSOC);
+
+        } catch (PDOException $e) {
+            return false;
+        }
+    }
+
+
+    public static function GetDates() {
+        try {
+
+            $conn = new PDO("mysql:host=localhost;dbname=unihack2025", "andrew", "andrew1105");
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    
+            $stmt = $conn->prepare("SELECT `date` FROM entries");
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         } catch (PDOException $e) {
             return false;
